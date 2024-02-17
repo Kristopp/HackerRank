@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import hackerrank.challenges.BreakingRecords.BreakingRecords;
 import hackerrank.challenges.MinMaxSum.MinMaxSum;
 import hackerrank.challenges.PlusMinus.PlusMinus;
 import hackerrank.challenges.TimeConversion.TimeConversion;
@@ -14,15 +15,30 @@ import hackerrank.challenges.TimeConversion.TimeConversion;
 @SpringBootApplication
 public class HackerrankApplication {
 
-	static List<Integer> plusMinusData = new ArrayList<>(Arrays.asList(1, 1, 1, 0, -1, -1));
-	static List<Long> minMaxData = new ArrayList<>(Arrays.asList(1L, 2L, 3L, 4L, 5L, 6L));
-	static String timeConversionData = "07:05:45PM";
+	List<Integer> plusMinusData = new ArrayList<>(Arrays.asList(1, 1, 1, 0, -1, -1));
+	List<Long> minMaxData = new ArrayList<>(Arrays.asList(1L, 2L, 3L, 4L, 5L, 6L));
+	List<Integer> breakingRecordsData = Arrays.asList(12, 24, 13, 8, 15);
+	String timeConversionData = "07:05:45PM";
 
 	public static void main(String[] args) {
 		SpringApplication.run(HackerrankApplication.class, args);
-					// PlusMinus.plusMinus(plusMinusData);
-					// MinMaxSum.minMaxSum(minMaxData);
-		TimeConversion.convertTime(timeConversionData);
+
+		PlusMinus plusMinus = new PlusMinus();
+		MinMaxSum minMaxSum = new MinMaxSum();
+		TimeConversion timeConversion = new TimeConversion();
+		BreakingRecords breakingRecords = new BreakingRecords();
+
+		// PlusMinus
+		System.out.println("PlusMinus: " + plusMinus.result(Arrays.asList(1, 1, 1, 0, -1, -1)));
+
+		// MinMaxSum
+		System.out.println("MinMaxSum: " + minMaxSum.result(Arrays.asList(1L, 2L, 3L, 4L, 5L, 6L)));
+
+		// TimeConversion
+		System.out.println("TimeConversion: " + timeConversion.result("07:05:45PM"));
+
+		// BreakingRecords
+		System.out.println("BreakingRecords: " + breakingRecords.result(Arrays.asList(12, 24, 13, 8, 15)));
 
 	}
 

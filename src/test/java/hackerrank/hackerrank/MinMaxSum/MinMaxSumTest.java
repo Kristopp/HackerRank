@@ -13,8 +13,9 @@ public class MinMaxSumTest {
     @Test
 
     public void minMaxSumTest() {
+        MinMaxSum minMaxSum = new MinMaxSum();
         ArrayList<Long> arr = new ArrayList<>(Arrays.asList(1L, 2L, 3L, 4L, 5L, 6L));
         ArrayList<Long> result = new ArrayList<>(Arrays.asList(10L, 18L));
-        assertEquals(result, MinMaxSum.minMaxSum(arr));
+        assertEquals(result, minMaxSum.result(arr));
     }
 }

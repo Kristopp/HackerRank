@@ -12,7 +12,7 @@ public class MinMaxSum {
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static List<Long> minMaxSum(List<Long> arr) {
+    public List<Long> result(List<Long> arr) {
         // Write your code here
 
         List<Long> result = new ArrayList<Long>();

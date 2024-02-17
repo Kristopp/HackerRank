@@ -5,7 +5,7 @@ import java.util.*;
 public class PlusMinus {
 
     // https://www.hackerrank.com/challenges/three-month-preparation-kit-plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=three-month-preparation-kit&playlist_slugs%5B%5D=three-month-week-one
-    public static List<Double> plusMinus(List<Integer> arr) {
+    public List<Double> result(List<Integer> arr) {
 
         int positive = 0;
         int negative = 0;

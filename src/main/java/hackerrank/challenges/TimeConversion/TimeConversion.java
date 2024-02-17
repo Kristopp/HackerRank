@@ -12,12 +12,11 @@ public class TimeConversion {
 
     // sample output 19:05:45 time format
 
-    public static String convertTime(String inputTimeStr) {
+    public String result(String inputTimeStr) {
         DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("hh:mm:ssa", Locale.US);
         DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("HH:mm:ss");
 
         LocalTime time = LocalTime.parse(inputTimeStr, inputFormat);
-        System.out.println(time);
         String outputTimeStr = time.format(outputFormat);
 
         return outputTimeStr;
