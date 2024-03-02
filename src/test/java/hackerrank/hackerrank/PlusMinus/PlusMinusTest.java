@@ -1,4 +1,4 @@
-package hackerrank.challenges.PlusMinus;
+package hackerrank.hackerrank.PlusMinus;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import hackerrank.challenges.PlusMinus.PlusMinus;
 public class PlusMinusTest {
     @Test
     public void plusMinusTest() {

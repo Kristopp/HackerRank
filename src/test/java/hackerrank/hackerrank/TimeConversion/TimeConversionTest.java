@@ -1,11 +1,7 @@
 package hackerrank.hackerrank.TimeConversion;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.sql.Time;
-
 import org.junit.jupiter.api.Test;
-
 import hackerrank.challenges.TimeConversion.TimeConversion;
 
 public class TimeConversionTest {

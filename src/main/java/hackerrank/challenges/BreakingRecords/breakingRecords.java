@@ -4,20 +4,32 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BreakingRecords {
-    List<Integer> scores2 = Arrays.asList(12, 24, 13, 8, 15);
-
-    int min = 0;
-    int max = 0;
+    List<Integer> scores2 = Arrays.asList(12, 24, 11, 8, 15);
 
     public List<Integer> result(List<Integer> scores) {
-        // Sort array smallest to higest and return first and last
-        scores.sort(null);
+        int min = scores.get(0);
+        int max = scores.get(0);
 
+        int minCount = 0;
+        int maxCount = 0;
 
-        min = scores.get(0);
-        max = scores.get(scores.size() - 1);
+        // I need a loop
 
-        return Arrays.asList(min, max);
+        for (Integer i : scores) {
+            if (i < min) {
+                min = i;
+                minCount += 1;
+            } else if (i > max) {
+                max = i;
+                maxCount += 1;
+            }
+
+            System.out.println("minCount: " + minCount);
+            System.out.println("maxCount: " + maxCount);
+
+        }
+        System.out.println(Arrays.asList(minCount, maxCount));
+        return Arrays.asList(maxCount, minCount);
 
     }
 }
